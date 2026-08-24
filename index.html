@@ -279,6 +279,12 @@ const FT = (x,y,r) => '<g transform="translate('+x+','+y+') rotate('+(r||0)+')">
 
 const TOP='<text x="120" y="232" text-anchor="middle" fill="#5a6b85" stroke="none" font-size="15" font-family="sans-serif">vista dall\'alto · treppiede</text>';
 const FIG = {
+ psoasseduto: SV(GR+PR('M50 142 H150')+PR('M56 142 V66')+PR('M62 142 V220')+PR('M144 142 V220')
+  +HD(76,50)+'<path d="M76 66 V142"/>'
+  +'<path d="M76 142 L146 130 L154 196"/>'
+  +'<path d="M76 142 L150 104 L162 168"/>'
+  +AR('M186 122 V78')),
+
  marcia: SV(GR+HD(118,42)+'<path d="M118 58 V130"/><path d="M118 80 L96 108"/><path d="M118 80 L140 104"/>'
   +'<path d="M118 130 L108 176 L104 218"/><path d="M118 130 L152 138 L150 180"/>'+AR('M178 152 V114')),
 
@@ -730,6 +736,12 @@ const POME = [
   c:["Gamba avanti tesa, tallone a terra, punta su","Piegati dall'anca, non dalla schiena"]},
  {n:"19 · Quadricipite", m:"ALLUNGA · quadricipite e retto femorale", d:"30\" per lato", f:"quadricipite", t:30, sides:2,
   c:["Tallone verso il gluteo, ginocchia vicine","Bacino in retroversione: raddoppia l'effetto"]},
+ {n:"20 · Ginocchio alto da seduto", m:"FORZA · ileopsoas, sopra i 90°", d:"5 per lato · 2\" in alto", f:"psoasseduto", free:true, sides:2,
+  c:["Seduto, schiena appoggiata, <b>bacino fermo</b>",
+     "<b>Stacca la coscia</b> dalla sedia, lentamente",
+     "Tieni <b>2 secondi</b> in alto, scendi piano"],
+  e:"Se ti <b>inclini indietro</b> o alzi il fianco, è compenso: alza meno, ma resta fermo.",
+  fix:"Sotto i 90° il lavoro se lo prendono retto femorale e tensore. Da seduto sei <b>già a 90°</b>: ogni millimetro è ileopsoas puro.<br>Poi esci e fai <b>30-40 passi consapevoli</b>, pensando solo ad alzare il ginocchio."},
 ];
 
 const BICI = [
@@ -789,6 +801,12 @@ const BICI = [
  {n:"10 · Braccia larghe, palmi aperti", d:"2 × 15\"", f:"bracciaLarghe", t:15, sets:2,
   m:"ALLUNGA · pettorali e spalla anteriore",
   c:["Palmi in su, pollici indietro","Scapole al centro e in basso, costole basse","Senti aprire il petto, non tirare davanti alla spalla"]},
+ {n:"11 · Ginocchio alto da seduto", m:"FORZA · ileopsoas, sopra i 90°", d:"5 per lato · 2\" in alto", f:"psoasseduto", free:true, sides:2,
+  c:["Seduto, schiena appoggiata, <b>bacino fermo</b>",
+     "<b>Stacca la coscia</b> dalla sedia, lentamente",
+     "Tieni <b>2 secondi</b> in alto, scendi piano"],
+  e:"Se ti <b>inclini indietro</b> o alzi il fianco, è compenso: alza meno, ma resta fermo.",
+  fix:"Sotto i 90° il lavoro se lo prendono retto femorale e tensore. Da seduto sei <b>già a 90°</b>: ogni millimetro è ileopsoas puro.<br>La cyclette questo non te lo dà: la risalita del ginocchio la fa la gamba opposta."},
 ];
 
 const SERA = [
@@ -937,7 +955,7 @@ const SESS = {
  pome:      {t:"Pomeriggio · Tappetino", s:"5 giorni su 7",       m:"~34 min", ex:POME},
  test:      {t:"Test e contromisure",   s:"Quando qualcosa non va · con la contromisura", m:"~14 min", ex:TEST},
  sera:      {t:"Sera · Stretching",     s:"Lun-Ven, prima di dormire", m:"~14 min", ex:SERA},
- bici:      {t:"Pomeriggio · Cyclette",  s:"1-2 volte, al posto del tappetino", m:"~30 min", ex:BICI},
+ bici:      {t:"Pomeriggio · Cyclette",  s:"1-2 volte, al posto del tappetino", m:"~31 min", ex:BICI},
 };
 
 /* giorno → sessione mattutina suggerita */
@@ -1031,7 +1049,7 @@ function renderEx(){
   $("#exErr").innerHTML=e.e||""; $("#exErr").style.display=e.e?"block":"none";
   $("#exErr").className = S.key==="test" ? "tip" : "err";   // nei test è un riferimento, non un errore
   const fx=$("#exFix");
-  fx.innerHTML = e.fix? '<span class="lab">Contromisura</span>'+e.fix : "";
+  fx.innerHTML = e.fix? '<span class="lab">'+(S.key==="test"?"Contromisura":"Perché")+'</span>'+e.fix : "";
   fx.style.display = e.fix? "block" : "none";
   $("#bSet").style.display = e.free? "" : "none";
   $("#bGo").textContent = T.id? "Pausa" : "Avvia";
