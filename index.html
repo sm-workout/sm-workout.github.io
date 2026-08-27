@@ -553,7 +553,7 @@ const SBLOCCO = [
      "Senti tirare più indietro e più in basso rispetto al n°1: è un altro muscolo"],
   e:"<b>Sono due stiramenti diversi, non due versioni dello stesso.</b> Il trapezio va con lo sguardo avanti, l'elevatore con la testa ruotata verso il basso."},
 
- {n:"Braccia larghe, palmi aperti", d:"2 × 15\"", f:"bracciaLarghe", t:15, sets:2,
+ {n:"Braccia larghe, palmi aperti", d:"30 secondi", f:"bracciaLarghe", t:30,
   m:"ALLUNGA · pettorali e spalla anteriore",
   c:["Braccia all'altezza delle spalle, <b>palmi in su e pollici indietro</b>","Scapole verso il centro e <b>verso il basso</b>, non verso le orecchie","Costole basse: non inarcare la schiena per guadagnare apertura"],
   e:"<b>Devi sentire aprire il petto</b>, non tirare davanti alla spalla. Se tira lì, sei andato oltre: torna indietro."},
@@ -567,12 +567,17 @@ const SBLOCCO = [
   e:"<b>Al mattino i dischi sono al massimo del loro contenuto d'acqua</b>: è il momento in cui la flessione costa di più e l'estensione aiuta di più. Sta qui insieme a rotazione e inclinazione: i tre movimenti del tronco, uno per piano.",
 },
 
- {n:"Ruota tronco e quadrato dei lombi", d:"1'30\"", f:"quadrato", t:90,
+ {n:"Ruota il tronco", d:"30 secondi", f:"tronco", t:30,
+  m:"MOBILIZZA · rotazione del tronco",
+  c:["<b>Bacino fermo</b>, ruota solo sopra la vita",
+     "Lente e ampie, non a scatti","Espira andando in rotazione"]},
+
+ {n:"Inclinazione laterale", d:"30\" per lato", f:"quadrato", t:30, sides:2,
   m:"ALLUNGA · quadrato dei lombi e obliqui",
-  c:["<b>30\"</b> · rotazioni del tronco a bacino fermo, lente e ampie",
-     "<b>30\" per lato</b> · braccio sopra la testa, inclinati dal lato opposto",
-     "Spingi il bacino verso il lato che allunghi: senti tirare sul fianco, sopra la cresta iliaca"],
-  e:"<b>Il quadrato dei lombi</b> è il muscolo che si sovraccarica al posto del gluteo medio quando il bacino scende. È spesso il colpevole del mal di schiena basso e laterale."},
+  c:["Braccio sopra la testa, <b>inclinati dal lato opposto</b>",
+     "<b>Spingi il bacino</b> verso il lato che allunghi",
+     "Senti tirare sul fianco, sopra la cresta iliaca"],
+  e:"<b>Il quadrato dei lombi</b> si sovraccarica al posto del gluteo medio quando il bacino scende. Insisti sul lato più rigido: nel tuo caso è il destro, quello che compensa."},
 
  {n:"Ileopsoas in piedi", d:"30\" per lato", f:"ileopsoas", t:30, sides:2,
   m:"ALLUNGA · ileopsoas, il flessore dell'anca",
@@ -598,28 +603,27 @@ const SBLOCCO = [
 ];
 
 const CAVIGLIA = [
- {n:"Caviglia A · Volume", d:"3 × 20 per lato", f:"caviglia", sets:3, rest:45,
-  m:"RINFORZA · tibiale anteriore — sotto carico",
-  c:["Elastico sull'avampiede, ancorato davanti","Punta verso di te <b>con inversione</b> (verso l'interno)","Ritorno lento in 3 secondi"],
-  e:"<b>Dita rilassate, mai artigliate.</b> Se le dita si alzano hai perso il tibiale e stai usando gli estensori. È l'unico esercizio della caviglia <b>con una resistenza</b>: gli altri due allenano quello che hai già."},
+ {n:"Caviglia A · Inversione ed eversione", d:"2 × 15 per lato", f:"caviglia", sets:2, rest:30,
+  m:"RINFORZA · tibiale posteriore e peronei — stabilità laterale",
+  c:["Elastico, piede che ruota verso l'<b>interno</b> e verso l'<b>esterno</b>",
+     "Muove solo la caviglia: <b>ginocchio e gamba fermi</b>",
+     "Dita rilassate, mai artigliate"],
+  e:"<b>È l'esercizio del fisio, ed è quello giusto:</b> allena la caviglia evitando il compenso dell'estensore dell'alluce. Ma allena la <b>stabilità laterale</b>, non il piede cadente — quello sta tutto in B e C."},
 
  {n:"Caviglia B · Resistenza", d:"15-30 ripetizioni", f:"caviglia", free:true,
   m:"RINFORZA · tibiale anteriore — resistenza",
-  c:["Alza la punta, tieni 5 secondi, abbassa","<b>Minimo 15.</b> Sotto, è una giornata storta","<b>Massimo 30.</b> Arrivato lì non aggiungere ripetizioni: aggiungi elastico leggero e riparti da 15"],
-  e:"<b>A esaurimento solo il lunedì</b>, come misura. Gli altri giorni fermati 2-3 ripetizioni prima del cedimento: allenare a cedimento tutti i giorni ti svuota il muscolo che ti serve per camminare."},
+  c:["Alza la punta, tieni 5 secondi, abbassa","<b>Minimo 15.</b> Sotto, è una giornata storta","<b>Massimo 30.</b> Arrivato lì non aggiungere ripetizioni: aggiungi elastico leggero e riparti da 15","<b>Ginocchio fermo.</b> Se scappa verso l'interno il piede sta pronando: alza meno, ma dritto"],
+  e:"<b>A esaurimento solo il lunedì</b>, come misura. Gli altri giorni fermati 2-3 ripetizioni prima del cedimento: allenare a cedimento tutti i giorni ti svuota il muscolo che ti serve per camminare.",
+  fix:"Se dopo <b>il polpaccio si scioglie</b>, l'esercizio è fatto bene: contrarre il tibiale <b>spegne il polpaccio</b> per via riflessa.<br>Dura poco, quindi falla <b>prima</b> dello stretching e <b>prima di uscire</b> — e durante le pause sedute della camminata."},
 
  {n:"Caviglia C · Velocità", d:"3 × 15\" per lato", f:"tapping", t:15, sides:2, sets:3,
   m:"RINFORZA · tibiale anteriore — velocità di attivazione",
   c:["Seduto, tallone fermo a terra","Batti la punta il più veloce possibile","Dita rilassate anche qui"]},
 
- {n:"Caviglia D · Inversione ed eversione", d:"2 × 15 per lato · Lun Mer Ven", f:"caviglia", sets:2, rest:30,
-  m:"RINFORZA · peronei e tibiale posteriore — stabilità laterale",
-  c:["Elastico, piede che ruota verso l'interno e verso l'esterno","Muove solo la caviglia: <b>ginocchio e gamba fermi</b>","Solo tre volte a settimana: è un accessorio, non la priorità"],
-  e:"<b>È un altro muscolo e un altro problema.</b> Qui alleni la stabilità laterale della caviglia — utile per l'equilibrio, ma non tocca il piede cadente."},
 ];
 
 const EQUILIBRIO = [
- {n:"1 · Piedi uniti", d:"30 secondi", f:"fUniti", t:30,
+ {n:"1 · Piedi uniti", d:"2 × 30\"", f:"fUniti", t:30, sets:2,
   m:"ALLENA · controllo posturale, strategia di caviglia",
   c:["Piedi che si toccano, alluci e talloni, braccia lungo i fianchi",
      "<b>Ginocchia morbide</b>, mai bloccate indietro",
@@ -800,7 +804,7 @@ const BICI = [
  {n:"9 · Mani dietro la schiena", d:"2 × 20\"", f:"manidietro", t:20, sets:2,
   m:"ALLUNGA · pettorali e spalle anteriori",
   c:["Mani intrecciate dietro, spingi verso il basso","Petto aperto, mento leggermente indietro"]},
- {n:"10 · Braccia larghe, palmi aperti", d:"2 × 15\"", f:"bracciaLarghe", t:15, sets:2,
+ {n:"10 · Braccia larghe, palmi aperti", d:"30 secondi", f:"bracciaLarghe", t:30,
   m:"ALLUNGA · pettorali e spalla anteriore",
   c:["Palmi in su, pollici indietro","Scapole al centro e in basso, costole basse","Senti aprire il petto, non tirare davanti alla spalla"]},
  {n:"11 · Ginocchio alto da seduto", m:"FORZA · ileopsoas, sopra i 90°", d:"5 per lato · 2\" in alto", f:"psoasseduto", free:true, sides:2,
@@ -858,7 +862,7 @@ const SERA = [
  {n:"10 · Cervicale · elevatore", d:"30\" per lato", f:"cervicale2", t:30, sides:2,
   m:"ALLUNGA · elevatore della scapola",
   c:["Orecchio verso la spalla, <b>poi ruota la testa verso il basso</b>: guarda verso l'ascella opposta","La mano tira in diagonale, verso il basso e in avanti"]},
- {n:"11 · Braccia larghe, palmi aperti", d:"2 × 15\"", f:"bracciaLarghe", t:15, sets:2,
+ {n:"11 · Braccia larghe, palmi aperti", d:"30 secondi", f:"bracciaLarghe", t:30,
   m:"ALLUNGA · pettorali e spalla anteriore",
   c:["Palmi in su, pollici indietro","Scapole al centro e in <b>basso</b>","Costole basse: non inarcare per guadagnare apertura"]},
  {n:"12 · Mani dietro la schiena", d:"2 × 20\"", f:"manidietro", t:20, sets:2,
@@ -1074,13 +1078,14 @@ addEventListener("resize",()=>{ if(S.screen==="ex") fitInfo(); });
 function paintClock(){
   const e=curEx(), c=$("#clock");
   const g=$("#bGo"); if(g) g.textContent = T.id? "Pausa" : "Avvia";
-  c.className="clock"+(T.mode==="hold"?" run":T.mode==="rest"?" rest":T.mode==="done"?" done"
+  c.className="clock"+(T.mode==="hold"?" run":(T.mode==="rest"||T.mode==="prep")?" rest":T.mode==="done"?" done"
                       :(e.free&&S.set>0)?" run":"");
   if(e.stop){ c.textContent=fmt(T.up); c.className="clock"+(T.id?" run":""); }
   else if(T.mode==="free"||(e.free&&T.mode==="idle")){ c.textContent = e.free? (S.set||0) : fmt(T.up); }
   else if(T.mode==="idle") c.textContent = e.t? fmt(e.t) : (e.rest? fmt(e.rest) : "--");
   else if(T.mode==="done") c.textContent="✓";
   else c.textContent=fmt(T.left);
+  if(T.mode==="prep") $("#sideLbl").textContent=(e.sides===2?(S.side===0?"DESTRA":"SINISTRA")+" · ":"")+"PRONTI";
   if($("#mirror").classList.contains("on")){
     $("#mhA").textContent=e.n; $("#mhB").textContent=e.d;
     $("#mhC").textContent=c.textContent;
@@ -1106,6 +1111,9 @@ function runT(){
 function endT(){
   clearInterval(T.id); T.id=null; bEnd();
   const e=curEx(), tot=e.sets||1;
+  if(T.mode==="prep"){                       // conto alla rovescia per sistemarsi
+    T.mode="hold"; T.left=e.t; renderEx(); runT(); return;
+  }
   if(T.mode==="rest"){                       // fine recupero
     T.mode="idle";
     if(!e.t) S.set=Math.min(tot,S.set+1);    // esercizio a ripetizioni: una serie in meno
@@ -1114,17 +1122,17 @@ function endT(){
     return;
   }
   if(T.mode!=="hold"){ T.mode="idle"; renderEx(); return; }
-  if(e.sides===2 && S.side===0){             // cambia lato
+  if(e.sides===2 && S.side===0){             // cambia lato: pausa per sistemarsi
     S.side=1; T.mode="idle"; renderEx();
-    setTimeout(()=>{ if(S.screen==="ex") toggleT(); },1800); return;
+    T.mode="prep"; T.left=e.prep||5; paintClock(); runT(); return;
   }
   S.side=0; S.set=Math.min(tot,S.set+1);
   if(S.set>=tot){ T.mode="done"; renderEx(); return; }
   if(e.rest){                                // tenuta + recupero (intervalli)
     T.mode="rest"; T.left=e.rest; renderEx(); runT(); return;
   }
-  T.mode="idle"; renderEx();
-  setTimeout(()=>{ if(S.screen==="ex") toggleT(); },2500);
+  T.mode="idle"; renderEx();                 // serie successiva: pausa per sistemarsi
+  T.mode="prep"; T.left=e.prep||6; paintClock(); runT();
 }
 function markSet(){
   const e=curEx();
